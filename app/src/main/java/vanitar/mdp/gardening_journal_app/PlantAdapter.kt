@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 
-class PlantAdapter(private val plants: List<Plant>) :  RecyclerView.Adapter<PlantAdapter.PlantViewHolder>() {
+class PlantAdapter : ListAdapter<Plant, PlantAdapter.PlantViewHolder>(PlantDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlantViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -17,17 +17,14 @@ class PlantAdapter(private val plants: List<Plant>) :  RecyclerView.Adapter<Plan
     }
 
     override fun onBindViewHolder(holder: PlantViewHolder, position: Int) {
-        val currentPlant = plants[position]
+        val currentPlant = getItem(position)
         holder.bind(currentPlant)
-    }
-
-    override fun getItemCount(): Int {
-        return plants.size
     }
 
     inner class PlantViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val textViewName: TextView = itemView.findViewById(R.id.textViewName)
         private val textViewType: TextView = itemView.findViewById(R.id.textViewType)
+
         fun bind(plant: Plant) {
             textViewName.text = plant.name
             textViewType.text = plant.type

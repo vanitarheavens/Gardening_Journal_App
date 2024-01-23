@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="nav_host_fragment" type="id" />
+    <item name="textViewName" type="id" />
+    <item name="textViewType" type="id" />
+    <item name="textViewPlantName" type="id" />
+    <item name="textViewPlantType" type="id" />
+    <item name="textViewWateringFrequency" type="id" />
+    <item name="textViewPlantingDate" type="id" />
 </resources>

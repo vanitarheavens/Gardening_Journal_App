@@ -1,6 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- TextView for Plant Name -->
+    <TextView
+        android:id="@+id/textViewPlantName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plant Name:" />
+
+    <!-- TextView for Plant Type -->
+    <TextView
+        android:id="@+id/textViewPlantType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plant Type:" />
+
+    <!-- TextView for Watering Frequency -->
+    <TextView
+        android:id="@+id/textViewWateringFrequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watering Frequency:" />
+
+    <!-- TextView for Planting Date -->
+    <TextView
+        android:id="@+id/textViewPlantingDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Planting Date:" />
+
+    <!-- Add more TextViews for other plant details -->
 
 </LinearLayout>
